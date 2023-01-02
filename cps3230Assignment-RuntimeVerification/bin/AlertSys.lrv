@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%% 5 alerts max
+%% bad delete when no alerts were issued and attempted to delete alert list 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+IMPORTS{
+import main.AlertSystem;
+import main.Alerts;
+
+}
+
+GLOBAL{
+        VARIABLES{
+            int noOfAlerts = 0;
+        }
+
+        EVENTS{
+            addAlert() = {*.addAlert()}
+            delAllAlerts() = {*.deleteAllAlerts()}
+        }   
+
+        PROPERTY MonitorAlertListS{
+            STATES{
+                BAD{
+                    tooManyAlerts %% acceding the limit of 5 alerts
+                    badDelete %% when no alerts are to be removed
+                    
+                }
+                STARTING{
+                    newAlert %% state were we have our alerts and can add to or delete alerts from 
+                }
+            }
+
+            TRANSITIONS{
+            	%% Alerts Transitions 
+            	%% if to many alerts - reach tooManyAlerts State  and return back to logged in  after words 
+                tooManyAlerts->tooManyAlerts [addAlert\\noOfAlerts++;System.out.println("Too many alerts already");]
+                tooManyAlerts->tooManyAlerts [delAllAlerts\noOfAlerts > 6\noOfAlerts--;]
+                tooManyAlerts->newAlert [delAllAlerts\noOfAlerts == 6\noOfAlerts--;]
+                %% bad delete transition 
+                newAlert->badDelete [delAllAlerts\noOfAlerts == 0\System.out.println("Bad Delete!!!");]
+                newAlert->tooManyAlerts [addAlert\noOfAlerts == 5\noOfAlerts++;]
+                newAlert->newAlert [addAlert\\noOfAlerts++;]
+            }
+        }
+    
+
+}

@@ -1,0 +1,6 @@
+[MonitorAlertListS]AUTOMATON::> MonitorAlertListS() STATE::>newAlert
+Bad Delete!!!
+[MonitorAlertListS]MOVED ON METHODCALL: void main.AlertSystem.deleteAllAlerts() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! badDelete 
+aspects._asp_AlertSys0.ajc$before$aspects__asp_AlertSys0$2$5ba428ac(_asp_AlertSys0.aj:25)
+main.AlertSystem.menu(AlertSystem.java:61)
+main.AlertSystem.main(AlertSystem.java:70) 

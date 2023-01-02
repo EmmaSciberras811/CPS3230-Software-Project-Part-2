@@ -1,0 +1,15 @@
+[MonitorAlertListS]AUTOMATON::> MonitorAlertListS() STATE::>newAlert
+[MonitorAlertListS]MOVED ON METHODCALL: void main.AlertSystem.addAlert() TO STATE::> newAlert
+[MonitorAlertListS]AUTOMATON::> MonitorAlertListS() STATE::>newAlert
+[MonitorAlertListS]MOVED ON METHODCALL: void main.AlertSystem.addAlert() TO STATE::> newAlert
+[MonitorAlertListS]AUTOMATON::> MonitorAlertListS() STATE::>newAlert
+[MonitorAlertListS]MOVED ON METHODCALL: void main.AlertSystem.addAlert() TO STATE::> newAlert
+[MonitorAlertListS]AUTOMATON::> MonitorAlertListS() STATE::>newAlert
+[MonitorAlertListS]MOVED ON METHODCALL: void main.AlertSystem.addAlert() TO STATE::> newAlert
+[MonitorAlertListS]AUTOMATON::> MonitorAlertListS() STATE::>newAlert
+[MonitorAlertListS]MOVED ON METHODCALL: void main.AlertSystem.addAlert() TO STATE::> newAlert
+[MonitorAlertListS]AUTOMATON::> MonitorAlertListS() STATE::>newAlert
+[MonitorAlertListS]MOVED ON METHODCALL: void main.AlertSystem.addAlert() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! tooManyAlerts 
+aspects._asp_AlertSys0.ajc$before$aspects__asp_AlertSys0$3$e2260826(_asp_AlertSys0.aj:34)
+main.AlertSystem.menu(AlertSystem.java:60)
+main.AlertSystem.main(AlertSystem.java:70) 

@@ -1,0 +1,17 @@
+digraph _logic_LoginAttempt {
+rankdir=LR;
+node [shape = circle]; LOGGEDIN VIEWALERTS tooManyAlerts badDelete newAlert LOGGEDOUT;
+node [shape = point]; _s_s;
+_s_s -> LOGGEDOUT;
+LOGGEDOUT -> LOGGEDOUT [ label = "(1) inLoginScreen\\inLogin == false \\System . out . println ( \" Invalid Login. Back in login screen, try again! \" ) ; "];
+LOGGEDOUT -> LOGGEDIN [ label = "(2) validLogin\\inLogin == true \\System . out . println ( \" Valid Login event. @ Home Page \" ) ; "];
+LOGGEDIN -> VIEWALERTS [ label = "(1) inAlertScreen\\inAlert == true \\System . out . println ( \"  @ Alert Page \" ) ; "];
+LOGGEDIN -> LOGGEDOUT [ label = "(2) inLoginScreen\\inLogin == true \\System . out . println ( \" Valid Logout \" ) ; "];
+newAlert -> badDelete [ label = "(1) delAllAlerts\\noOfAlerts == 0 \\System . out . println ( \" Bad Delete!!! \" ) ; "];
+newAlert -> tooManyAlerts [ label = "(2) addAlert\\noOfAlerts == 5 \\noOfAlerts ++ ; "];
+newAlert -> VIEWALERTS [ label = "(3) addAlert\\\\noOfAlerts ++ ; "];
+VIEWALERTS -> tooManyAlerts [ label = "(1) addAlert\\\\noOfAlerts ++ ; System . out . println ( \" Too many alerts already \" ) ; "];
+VIEWALERTS -> LOGGEDOUT [ label = "(2) inAlertScreen\\inLogin == true \\System . out . println ( \" Valid Logout \" ) ; "];
+tooManyAlerts -> tooManyAlerts [ label = "(1) delAllAlerts\\noOfAlerts > 6 \\noOfAlerts -- ; "];
+tooManyAlerts -> newAlert [ label = "(2) delAllAlerts\\noOfAlerts == 6 \\noOfAlerts -- ; "];
+}

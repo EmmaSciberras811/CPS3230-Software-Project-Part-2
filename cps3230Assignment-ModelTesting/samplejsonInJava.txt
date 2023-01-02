@@ -1,0 +1,16 @@
+Unirest.post(postAlertURL)
+                        .header("Content-Type", "application/json")
+                        .body("{\"alertType\":1," +
+                                "\"heading\":\"Testing Exceeding Alert Limit \"," +
+                                "\"description\":\" creating alerts by post req\"," +
+                                "\"url\":\"https://www.google.com\" ,"+
+                                "\"imageUrl\":\"\"," +
+                                "\"postedBy\":\"d2ae663d-95d7-458e-962a-fbe38772bb62\"," +
+                                "\"priceInCents\":100}")
+                        .asJson();
+
+// recall for delete no body is required, just include the header.
+// urls for requests:
+    String marketalertum = "https://www.marketalertum.com";
+    String delReqURL = "https://api.marketalertum.com/Alert?userId=d2ae663d-95d7-458e-962a-fbe38772bb62";
+    String postAlertURL = "https://api.marketalertum.com/Alert";
