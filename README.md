@@ -8,7 +8,7 @@ MarketAlertUM.com is a website that provides customised alerts to users when the
 The website can be accessed at https://www.marketalertum.com. The website allows you to log in, view alerts customised to you, and log out.
 
 ## Task 2: Runtime verification
-Using the symbolic automaton specified in the documentation/report, program and compile a monitor which is able to verify your system at runtime - Using Eclipse as an IDE adn Larva as a runtime verification tool. 
+Using the symbolic automaton specified in the documentation/report, program and compile a monitor which is able to verify your system at runtime - Using Eclipse as an IDE and Larva as a runtime verification tool. 
 code for task 2: CPS3230-Software-Project-Part-2/cps3230Assignment-RuntimeVerification/
 
 ## Task 3: Model-based testing
