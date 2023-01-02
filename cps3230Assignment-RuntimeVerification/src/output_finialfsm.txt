@@ -1,1 +1,0 @@
-[LoginAttempt]AUTOMATON::> LoginAttempt() STATE::>LOGGEDOUT
