@@ -16,7 +16,7 @@ Using the symbolic automaton specified for Task 1, implement a model-based test 
 Used Intellij as in IDE and implemneted a mavel project. 
 code for task 3: CPS3230-Software-Project-Part-2/cps3230Assignment-ModelTesting/
  - guards, transitions and tests can be found: CPS3230-Software-Project-Part-2/cps3230Assignment-ModelTesting/src/test/java/com/cps3230/
- - Note the above are separted into 2, as my FSM was split into two parts for simplicity: loggin system and alert system
+ - Note the above are separted into 2, as my FSM was split into two parts for simplicity: login system and alert system
    - loggin system checking if user is logged in - bad or good login 
    - on good login the user is allowed to add new alert/s (unless maximum is reached) and delete the alerts via post and delete requests
 
